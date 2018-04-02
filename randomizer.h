@@ -7,19 +7,8 @@
 class Randomizer
 {
   public:
-    static Randomizer* instance()
-    {
-      if(!m_instance)
-      {
-        m_instance = new Randomizer;
-        srand(time(NULL));
-      }
-      return m_instance;
-    }
-    unsigned int randomBetween(unsigned int min, unsigned int max)
-    {
-      return rand() % max + min;
-    }
+    static Randomizer* instance();
+    unsigned int randomBetween(unsigned int min, unsigned int max);
   private:
     static Randomizer* m_instance;
 };

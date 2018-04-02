@@ -12,7 +12,7 @@ Randomizer* Randomizer::instance()
   return m_instance;
 }
 
-unsigned int randomBetween(unsigned int min, unsigned int max)
+unsigned int Randomizer::randomBetween(unsigned int min, unsigned int max)
 {
-  return rand() % max + min;
+  return rand() % (max - min) + min;
 }
